@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LINKS */
+
+a:link {
+    color: none;
+    text-decoration: none;
+}
+
+a:visited {
+    color: none;
+    text-decoration: none;
+}
+
+a:hover {
+    color: none;
+    text-decoration: none;
+}
+
+a:active {
+    color: none;
+    text-decoration: none;
+}
+
+/* VARIABLES */
+
+:root {
+    --background:#030712 ;
+    --item:#10141f;
+    --white: #C7C7C7 ;
+    --offwhite:  #bba2a2;
+
+    --lightmode:  #C7C7C7;
+    --darkmode: #030712;
+ }
+
+/* FONTS */
+
+@font-face {
+    font-family: bagnard;
+    src: url(Jacquard24-Regular.ttf);
+}
+
+@font-face {
+    font-family: sanscode;
+    src: url(GoogleSansCode-VariableFont_wght.ttf);
+}
+
+/* hp */
+
+h1 {
+    font-family: bagnard;
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+
+
+h2 {
+    font-family: sanscode;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+h3  {
+     font-family: bagnard;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--white);
+}
+
+p {
+    font-family: sanscode;
+     font-size: 0.8rem;
+    color: var(--white);
+}
+
+/* STYLES */
+
+body {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    /* overflow: hidden; */
+}
+
+.left-panel {
+   min-width:70px;
+   
+   height: 100vh;
+     background-color: var(--item);
+    border-left: 1px dotted var(--white);
+    border-top: 1px dotted var(--white); 
+    border-bottom:1px dotted var(--white);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+      position: sticky;
+    top:0;
+}
+
+#open, #close {
+    color: var(--white);
+    scale: 2;
+
+    transform: translateY(50%);
+
+    position: sticky;
+    top:0;
+}
+
+#close {
+    display: none;
+}
+
+#open:hover, #close:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#side-menu {
+    background-color: var(--item);
+    border-right: 1px dotted var(--white);
+    border-top: 1px dotted var(--white); 
+    border-bottom:1px dotted var(--white);
+
+    width: 0px;
+    height: 100vh;
+    
+     position: sticky;
+    top:0;
+    transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    overflow: hidden;
+}
+
+.menu-item{
+    color: var(--white);
+    font-family: sanscode;
+    padding-top: 8px;
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    cursor: pointer; 
+}
+
+.main-container {
+    background-color: var(--background);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.body-grid-item {
+    border: 1px dotted var(--white);
+}
+
+#top-panel {
+    height: 10vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+.light-dark-container{
+    display: flex;
+    margin-right: 2%;
+    border-radius: 5px;
+    border: 1px solid var(--white);
+    background-color: var(--background);
+}
+
+.light-dark-item {
+    
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#moon {
+    color: var(--lightmode);
+}
+
+#sun {
+    color: var(--darkmode);
+}
+
+#light-mode{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--lightmode);
+}
+
+#dark-mode{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--darkmode);
+}
+
+#light-mode:hover, #dark-mode:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#sub-header-panel {
+    padding: 6px;
+}
+
+#title, #sub-title {
+    padding-left: 3%;
+   
+}
+
+#title:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* MAIN PANEL */
+
+#main-panel {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   position: relative;
+}
+
+.main-panel-item {
+    background-color: var(--item);
+    border-radius: 5px;
+    display: none;
+}
+
+/* ABOUT PAGE -------------------- */
+
+#about-page {
+display: flex;
+/* ALSO main-panel-item */
+    width: 80%;
+    flex-direction: column;
+    opacity: 0.9;
+    padding: 10px;
+
+    z-index: 2;
+}
+
+/* SKILLS PAGE  -------------------- */
+
+#skills-page {
+    /* display: flex; */
+     /* ALSO main-panel-item */
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+}
+
+/* .skill-container {
+    border: 1px dotted var(--white);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+} */
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+    align-items: center;
+}
+
+.logo-item {
+    height: 42px;
+    padding: 5px;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-title {
+    height: 30px;
+    text-align: center;
+}
+
+@media screen and (max-width:450px){
+    .skill-title {
+        height: fit-content;
+    }
+}
+
+#wx {
+    height: 37px;
+}
+
+#edu-text{
+    text-align: center;
+}
+
+/* PORTFOLIO PAGE -------------------- */ 
+
+#portfolio-page {
+    /* display: flex; */
+    /* ALSO main-panel-item */
+    background-color: var(--background);
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background-color: var(--item);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+@media screen and (max-width: 768px){
+
+    .portfolio-item {
+    grid-template-columns: 100%;
+    overflow: hidden;
+    }
+
+    .portfolio-title {
+        font-size: 1.5rem;
+    }
+}
+
+.portfolio-title {
+    /* font-size: 2rem; */
+    text-decoration: underline;
+}
+
+.portfolio-title:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+video {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px black;
+}
+
+#vid1 {
+    transform: translateX(0px);
+}
+
+#vid2{
+    transform: translateX(10px);
+    transform: rotate(2deg);
+}
+
+#vid3 {
+    transform: translateX(-10px);
+    transform: rotate(-1deg);
+}
+
+/* CONTACT PAGE -----------------------*/
+
+#contact-page {
+    padding: 20px;
+    flex-direction: column;
+}
+
+.contact-item:hover {
+   text-decoration: underline;
+}

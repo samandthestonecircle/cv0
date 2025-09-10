@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Smith - Web Development CV</title>
+    <link rel="icon" type="image/x-icon" href="s-cv-favicon.webp">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+  
+</head>
+<body>
+
+<div class="left-panel">
+
+        <div class="menu-button" id="open" onclick="openMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+            </svg>
+        </div>
+
+        <div class="menu-button" id="close" onclick="closeMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+        </div>
+</div>
+
+<div class="side-menu-container" id="side-menu">
+   
+    <div class="menu-item" id="about" onmouseenter="sqBracket('about')" onmouseleave="noSqBracket('about')" onclick="openPage('about-page', '0'),closeMenu()">&nbspABOUT</div>
+    <div class="menu-item" id="skills" onmouseenter="sqBracket('skills')" onmouseleave="noSqBracket('skills')" onclick="openPage('skills-page', '1'),closeMenu()">&nbspSKILLS</div>
+    <div class="menu-item" id="portfolio" onmouseenter="sqBracket('portfolio')" onmouseleave="noSqBracket('portfolio')" onclick="openPage('portfolio-page', '2'),closeMenu()">&nbspPORTFOLIO</div>
+    <div class="menu-item" id="contact" onmouseenter="sqBracket('contact')" onmouseleave="noSqBracket('contact')" onclick="openPage('contact-page', '3'),closeMenu()">&nbspCONTACT</div>
+
+</div>
+
+<div class="main-container">
+
+    <div class="body-grid-item" id="top-panel">
+
+        <div class="light-dark-container">
+
+            <div class="light-dark-item" id="light-mode" onclick="lightMode()">
+
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                </svg>
+
+            </div>
+
+            <div class="light-dark-item" id="dark-mode" onclick="darkMode()">
+                
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
+                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="body-grid-item" id="header-panel">
+
+        <h1 id="title" onclick="closePages(), closeMenu(), home()">Samuel Smith</h1>
+        
+    </div>
+
+    <div class="body-grid-item" id="sub-header-panel">
+        <h2 id="sub-title">[ WEB DEVELOPMENT CV ]</h2>
+    </div>
+
+    <div class="body-grid-item" id="main-panel">
+
+    <!-- ABOUT -->
+
+        <div class="main-panel-item" id="about-page">
+
+            <h3>About</h3><br>
+            
+            <p>I've always been fascinated by breaking things down, <span class="highlight">understanding their fundamental parts</span>, then rebuilding them in my own way to create something new. This desire to get 'under the hood', coupled with a long standing curiosity about computer programming, led me to Harvard's CS50x which I began in 2024. <br><br>
+                
+                Coming from an extensive background in audio engineering and musical composition, I found the transition into programming exciting and intuitive. Already familiar with the <span class="highlight"> harmony between technical proficiency and artistic expression</span>, I became particualrly hooked on website design. <br><br>
+
+                I built a number of browser based programs including a stock managemnt app that my work colleagues used to speed up the laborious and error-prone process that was currently in place. On top of it's <span class="highlight">functionality and clear user-interface</span>, I also designed it to fit the company's branding and visual identity.<br><br>
+
+                I was then approached by friends and colleagues to build their <span class="highlight"> small business websites</span>, either coded completely from scratch with custom grahics and interactive elements, or to help fix and update their half-finished work on various CMS including Wix, Squarespace, Shopify, and Wordpress.<br><br>
+                
+                I recently began the Full Stack Open course from University of Helsinki covering React, Redux, Node.js, MongoDB, GraphQL and TypeScript to further expand my abilities. 
+            </p>
+                        
+        </div>
+
+    <!-- SKILLS -->
+
+        <div class="main-panel-item" id="skills-page" onmouseover="revertProgramText()">
+
+            <h3 class="skill-title" id="languages">Languages</h3>
+            <br>
+            <div class="logo-container">
+                <img class="logo-item" src="HTML5_Badge_64.png" onmouseenter="programText('languages','Html')">
+                <img class="logo-item" src="Official_CSS_Logo.svg.png" onmouseenter="programText('languages','CSS')">
+                <img class="logo-item" src="JavaScript-logo.png" onmouseenter="programText('languages','JavaScript')">
+            </div>
+            <br><br>
+
+            <h3 class="skill-title" id="programs">Programs & Platforms</h3>
+            <br>
+            <div class="logo-container">
+               
+                <img class="logo-item" src="Adobe_Premiere_Pro_CC_icon.svg.png" onmouseenter="programText('programs','Adobe Premiere Pro')">
+                <img class="logo-item" src="Figma-logo.svg.png" onmouseenter="programText('programs','Figma')">
+                 <img class="logo-item" src="The_GIMP_icon_-_gnome.svg.png" onmouseenter="programText('programs','GIMP')">
+                <img class="logo-item" src="Inkscape_Logo.svg.png" onmouseenter="programText('programs','Inkscape')">
+                <img class="logo-item" src="Blender_logo_no_text.svg.png" onmouseenter="programText('programs','Blender')">
+                <img class="logo-item" src="Reaper_Logo.png" onmouseenter="programText('programs','Reaper')">
+                
+            </div>
+            <br>
+            <div class="logo-container">
+                <img class="logo-item" id="wx" src="wix-logo.webp" onmouseenter="programText('programs','Wix')">
+                <img class="logo-item" id="sq" src="Squarespace_Logo.png" onmouseenter="programText('programs','Squarespace')">
+                
+                <img class="logo-item" src="shopify.png" onmouseenter="programText('programs','Shopify')">
+                <img class="logo-item" id="wp" src="WordPress_blue_logo.svg.png" onmouseenter="programText('programs','WordPress')">
+                
+            </div>
+            <br><br>
+
+            <h3>Education</h3>
+            <br>
+            <p id="edu-text">Full Stack Open - University of Helsinki, 2025 -<br>
+            CS50x - Harvard University, 2024 -<br>
+           BA Music (Hons) - University of Southampton, 2012 - 2015</p>
+            <br><br>
+
+        </div>
+
+        <!-- PORTFOLIO -->
+
+        <div class="main-panel-item" id="portfolio-page">
+
+            <!-- wyattaudiouk -->
+
+            <div class="portfolio-item">
+
+                <div>
+                    <br>
+                    <a href="https://wyattaudiouk.com/" target="_blank"><h3 class="portfolio-title">wyattaudiouk.com</h3></a><br>
+
+                    <p class="portfolio-p">For this project, the client wanted a custom website that would not only advertise their range of services, but also convey a strong and unique aesthetic. <br><br>
+                        
+                    This served as an invitation into their world, strengthening their brand identity and ultimately leading to a consistently expanding and loyal customer base.                    
+                    </p><br>
+
+                </div>
+                
+                <div id="vid1">
+                    <video autoplay loop muted src="videos-webm/Recording 2025-09-10 020930.webm"></video><br><br>
+                </div>
+
+                <div>
+                    <br><br><br>
+                    <p class="portfolio-p">I shot and edited a showreel style video of the client at work to use as a landing page background. <br><br>
+                        Then, using various responsive layouts, modals,  and scroll-driven animations, I created an intuitive and engaging user experience. </p><br>
+
+                </div>
+
+                <div id="vid2">
+                    <video autoplay loop muted src="videos-webm/Recording 2025-09-10 021226.webm"></video><br><br>
+                </div>
+
+                <div>
+                    <br><br><br>
+                    <p class="portfolio-p">Finally, I came up with the idea to have an interactive element that would provide an enjoyable and memorable experience for the user. <br><br> 
+
+                     This further showcased the clients personality and interests, providing a deeper connection with their customers' demographic.
+
+                    </p><br>
+                </div>
+
+                <div id="vid3">
+                    <video autoplay loop muted src="videos-webm/Recording 2025-09-10 021619.webm"></video><br><br>
+                </div>
+
+            </div>
+
+            <!-- quakingaspensmusic -->
+
+            <div class="portfolio-item">
+
+                <div>
+                <a href="https://quakingaspensmusic.com/" target="_blank"><h3 class="portfolio-title">quakingaspensmusic.com</h3></a><br>
+
+                <p class="portfolio-p">This artist wanted a simple and effective platform to showcase their work and provide information in a unique and central location. <br><br>Being fast and accesible to both desktop and mobile browsers was paramount so I made good use of media queries, content placeholders, and web optimised media, along with SEO optimization and accessibility considerations. <br><br>
+                     As the sites primary users are both fans and music industry members alike, the information had to be both clear and easy to access, as well as being consistent with the artists aesthetic. </p><br>
+                </div>
+
+                <div id="vid2">
+                <video autoplay loop muted src="videos-webm/Recording 2025-09-10 023213.webm"></video><br><br>
+                </div>
+
+            </div>
+
+            <!-- jjnexus -->
+
+            <div class="portfolio-item">
+
+                <div>
+                <a href="https://jjnexus.com/" target="_blank"><h3 class="portfolio-title">jjnexus.com</h3></a><br>
+
+                <p class="portfolio-p">As both a Sound Designer and Audio Engineer, this client wanted a website that could showcase their services in both of these fields, side by side, and in a manner consistent with those fields respective common practices. </p><br>
+
+                <p>Leaning into a game-like aesthetic, I sourced various pixel based components and created interactive animated elements.   </p>
+                </div>
+
+                <div id="vid1">
+                <video autoplay loop muted src="videos-webm/Recording 2025-09-10 020742.webm"></video><br><br>
+                </div>                
+                
+            </div>
+
+            <div class="portfolio-item">
+
+                <div>
+                <a href="https://samandthestonecircle.github.io/stone-swords-1/" target="_blank"><h3 class="portfolio-title">stone-swords.com</h3></a><br>
+
+                <p class="portfolio-p"> The aim for this electronic musicians website was to say as much as possible with as little as possible. I designed a minimal, one page website that feels both ancient and modern, simple at first, but whose secrets may be revealed to those who are drawn to seek them.<br><br>
+                Care was taken to ensure a cohesive experience across all devices and screen dimensions. </p>
+                
+                </div>                
+
+                <div id="vid3">
+                <video autoplay loop muted src="videos-webm/Recording 2025-09-10 022833.webm"></video><br><br>
+                </div>
+                                              
+            </div>
+
+            <div class="portfolio-item">
+                <div>
+                <a href="https://samandthestonecircle.github.io/velknd.studio/" target="_blank"><h3 class="portfolio-title">velkndstudio.com</h3></a><br>
+
+                <p class="portfolio-p"> For my own website, I designed something that would strike the perfect balance between technical and artistic, thus reflecting my own qualities and the service that I bring to my clients. <br><br>
+
+                    I designed a site that evokes a technical document or blueprint, bringing the user 'behind the scenes' and leading them on a self directed experience through the interactable pop-up windows. <br><br>
+                    
+                    I developed enough features to demostrate capability without being overwhelming or excessive.<br><br>
+
+                    I designed an alternate layout that's triggered when viewed on smaller devices or viewports.
+                    
+                </p><br>
+                </div>
+
+                <div id="vid2">
+                <video autoplay loop muted src="videos-webm/Recording 2025-09-10 022610.webm"></video><br><br>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="main-panel-item" id="contact-page">
+
+            <h3>Hello</h3><br>
+
+           <a href="mailto:velknd.studio@gmail.com"> <p class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+</svg> velknd.studio@gmail.com</p></a><br>
+<a href="tel:+44 (0) 7922 770041"><p class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+</svg> +44 (0) 7922 770041<br> 
+        </p></a>
+
+        </div>
+
+</div>
+
+</div>
+</body>
+</html>
