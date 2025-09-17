@@ -29,8 +29,8 @@ a:active {
 /* VARIABLES */
 
 :root {
-    --background:#030712 ;
-    --item:#10141f;
+    --background: #030712 ;
+    --item: #10141f;
     --white: #C7C7C7 ;
     --trans-white-a: #c7c7c7d2 ;
     --trans-white-b: #c7c7c786 ;
@@ -233,7 +233,7 @@ body {
 
 #title {
     animation-name: glow;
-    animation-duration:1.5s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     
@@ -412,4 +412,5 @@ video {
 .contact-item:hover {
    text-decoration: underline;
 }
+
 
