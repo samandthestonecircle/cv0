@@ -32,6 +32,8 @@ a:active {
     --background:#030712 ;
     --item:#10141f;
     --white: #C7C7C7 ;
+    --trans-white-a: #c7c7c7d2 ;
+    --trans-white-b: #c7c7c786 ;
     --offwhite:  #bba2a2;
 
     --lightmode:  #C7C7C7;
@@ -229,6 +231,19 @@ body {
    
 }
 
+#title {
+    animation-name: glow;
+    animation-duration:1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes glow {
+    from {text-shadow: 1px 1px 25px var(--trans-white-a);}
+  to {text-shadow: 1px 1px 25px var(--trans-white-b);}
+}
+
 #title:hover{
     cursor: pointer;
     opacity: 0.9;
@@ -397,3 +412,4 @@ video {
 .contact-item:hover {
    text-decoration: underline;
 }
+
